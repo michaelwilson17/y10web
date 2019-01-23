@@ -1,0 +1,184 @@
+<html>
+    
+    <a href="/Users/michael.wilson/Desktop/egg.jpg">egg</a>
+    <p>
+    </p>
+    <a href="file:///Users/michael.wilson/Desktop/y10web/y10web/index.html">sal</a>
+    <h1 style="background-color:;"><center>
+    <title>classic sal</title>
+        <u><b> we don't deserve <a href="https://www.youtube.com/watch?v=t3eF3PzMeew">sal</a> </b></u>
+    <br>
+    <img
+        src = "download-1.jpg">
+    <p>
+    sal wasn't able to choose between <a href="https://www.youtube.com/watch?v=VWoIpDVkOH0">mo bamba</a> and <a href="https://www.youtube.com/watch?v=6ONRf7h3Mdk">sicko mode</a>, making him tonight's biggest loser
+        <p>
+    <img
+        src = "https://5.imimg.com/data5/CB/JP/MY-6680506/brown-eggs-250x250-250x250.jpg">
+            <a href="https://www.instagram.com/p/BsOGulcndj-/"><p>egg</a></p>
+            
+    </center>
+    </h1>
+        
+    
+    <b>This is my game. Use the "wasd" keys to move.</b>
+    
+    <br>
+    
+    <div>
+<canvas id="canvas" width="300" height="200">
+This text is displayed if your browser does not support HTML5 Canvas.
+<script type="text/javascript">
+/*
+   index.html - draws a dot on the screen, credit to:
+   http://html5.litten.com/moving-shapes-on-the-html5-canvas-with-the-keyboard/
+   programmer: MHoel, Nov 3, 2014
+*/
+
+
+// Set some global variables
+var canvas;
+var ctx;
+var dx = 5;
+var dy = 5;
+var x = 150;
+var y = 100;
+var WIDTH = 300;
+var HEIGHT = 200;
+
+function circle(x,y,r) {
+ctx.beginPath();
+ctx.arc(x, y, r, 0, Math.PI*2, true);
+ctx.fill();
+}
+
+function rect(x,y,w,h) {
+ctx.beginPath();
+ctx.rect(x,y,w,h);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+}
+
+function clear() {
+ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
+// Important starting function
+function init() {
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext("2d");
+return setInterval(draw, 10); // this is key, tells draw function to fire 10x per second
+}
+
+function doKeyDown(evt){
+switch (evt.keyCode) {
+case 38:  /* Up arrow was pressed */
+if (y - dy > 0){
+y -= dy;
+}
+break;
+case 40:  /* Down arrow was pressed */
+if (y + dy < HEIGHT){
+y += dy;
+}
+break;
+case 37:  /* Left arrow was pressed */
+if (x - dx > 0){
+x -= dx;
+}
+break;
+case 39:  /* Right arrow was pressed */
+if (x + dx < WIDTH){
+x += dx;
+}
+break;
+}
+}
+
+function draw() {
+clear();
+ctx.fillStyle = "black";
+ctx.strokeStyle = "black";
+rect(0,0,WIDTH,HEIGHT);
+ctx.fillStyle = "purple";
+circle(x, y, 10);
+}
+</script>
+    
+<script>
+    
+var canvas;
+var ctx;
+var dx = 5;
+var dy = 5;
+var x = 150;
+var y = 100;
+var WIDTH = 300;
+var HEIGHT = 200;
+    
+function circle2(x,y,r) {
+ctx.beginPath();
+ctx.arc(x, y, r, 0, Math.PI*2, true);
+ctx.fill();
+}
+
+function rect2(x,y,w,h) {
+ctx.beginPath();
+ctx.rect(x,y,w,h);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+}
+
+function clear() {
+ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
+// Important starting function
+function init() {
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext("2d");
+return setInterval(draw, 10); // this is key, tells draw function to fire 10x per second
+}
+
+function doKeyDown(evt){
+switch (evt.keyCode) {
+case 87:  /* Up arrow was pressed */
+if (y - dy > 0){
+y -= dy;
+}
+break;
+case 83:  /* Down arrow was pressed */
+if (y + dy < HEIGHT){
+y += dy;
+}
+break;
+case 65:  /* Left arrow was pressed */
+if (x - dx > 0){
+x -= dx;
+}
+break;
+case 68:  /* Right arrow was pressed */
+if (x + dx < WIDTH){
+x += dx;
+}
+break;
+}
+}
+
+function draw() {
+clear();
+ctx.fillStyle = "black";
+ctx.strokeStyle = "black";
+rect(0,0,WIDTH,HEIGHT);
+ctx.fillStyle = "purple";
+circle(x, y, 10);
+}
+    
+// Main part of program
+init();
+window.addEventListener('keydown',doKeyDown,true);
+</script>
+    
+</html>
